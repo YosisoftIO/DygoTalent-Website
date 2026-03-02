@@ -31,8 +31,8 @@ export default function Hero() {
     >
       {/* Decorative blurs */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-red-brand/[0.04] blur-3xl" />
-        <div className="absolute -bottom-16 -left-16 h-[260px] w-[260px] rounded-full bg-red-brand/[0.03] blur-2xl" />
+        <div className="absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-red-brand/[0.08] blur-3xl" />
+        <div className="absolute -bottom-16 -left-16 h-[260px] w-[260px] rounded-full bg-red-brand/[0.06] blur-2xl" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl text-center">
@@ -45,7 +45,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg lg:text-xl"
+          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:mt-8 sm:text-lg lg:text-xl"
           variants={fadeUp}
         >
           We represent creators, connect brands, and build lasting partnerships

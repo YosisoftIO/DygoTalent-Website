@@ -22,21 +22,21 @@ const fadeUp = {
 
 const accentStyles = [
   {
-    bg: 'bg-red-brand/[0.03]',
-    border: 'border-red-brand/10',
-    badge: 'bg-red-brand/[0.07] text-red-brand',
+    bg: 'bg-red-brand/[0.06]',
+    border: 'border-red-brand/20',
+    badge: 'bg-red-brand/[0.12] text-red-brand',
     line: 'bg-red-brand',
   },
   {
-    bg: 'bg-neutral-50',
-    border: 'border-neutral-200/60',
-    badge: 'bg-foreground/[0.06] text-foreground',
+    bg: 'bg-neutral-950',
+    border: 'border-neutral-800/60',
+    badge: 'bg-white/[0.06] text-foreground',
     line: 'bg-foreground',
   },
   {
-    bg: 'bg-red-brand/[0.02]',
-    border: 'border-red-brand/[0.08]',
-    badge: 'bg-red-brand/[0.07] text-red-brand',
+    bg: 'bg-red-brand/[0.04]',
+    border: 'border-red-brand/[0.15]',
+    badge: 'bg-red-brand/[0.12] text-red-brand',
     line: 'bg-red-brand/60',
   },
 ]
@@ -52,7 +52,7 @@ export default function ServicesContent() {
         variants={stagger}
       >
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-          <div className="absolute -left-24 top-20 h-[400px] w-[400px] rounded-full bg-red-brand/[0.03] blur-3xl" />
+          <div className="absolute -left-24 top-20 h-[400px] w-[400px] rounded-full bg-red-brand/[0.06] blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl">
@@ -63,7 +63,7 @@ export default function ServicesContent() {
             Our Services
           </motion.h1>
           <motion.p
-            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg lg:text-xl"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:mt-8 sm:text-lg lg:text-xl"
             variants={fadeUp}
           >
             From talent management to brand collaborations and strategic growth
@@ -108,14 +108,14 @@ export default function ServicesContent() {
                 </motion.h2>
 
                 <motion.p
-                  className="mt-6 text-base leading-relaxed text-neutral-600 sm:text-lg"
+                  className="mt-6 text-base leading-relaxed text-neutral-400 sm:text-lg"
                   variants={fadeUp}
                 >
                   {service.fullDescription}
                 </motion.p>
 
                 <motion.p
-                  className="mt-6 text-sm leading-relaxed text-neutral-500"
+                  className="mt-6 text-sm leading-relaxed text-neutral-400"
                   variants={fadeUp}
                 >
                   {service.forWho}
@@ -137,17 +137,17 @@ export default function ServicesContent() {
               {/* Includes panel */}
               <div className={isReversed ? 'lg:[direction:ltr]' : ''}>
                 <motion.div
-                  className={`rounded-2xl border ${style.border} bg-white p-8 sm:p-10`}
+                  className={`rounded-2xl border ${style.border} bg-neutral-900 p-8 sm:p-10`}
                   variants={fadeUp}
                 >
-                  <h3 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-600">
+                  <h3 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-400">
                     What&rsquo;s Included
                   </h3>
                   <ul className="mt-6 space-y-4">
                     {service.includes.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-3 text-sm leading-relaxed text-neutral-600 sm:text-base"
+                        className="flex items-start gap-3 text-sm leading-relaxed text-neutral-400 sm:text-base"
                       >
                         <span
                           className={`mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full ${style.line}`}
@@ -165,14 +165,14 @@ export default function ServicesContent() {
 
       {/* Bottom CTA */}
       <motion.section
-        className="relative overflow-hidden bg-foreground px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
+        className="relative overflow-hidden bg-neutral-900 px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
         variants={stagger}
       >
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-          <div className="absolute left-1/2 top-0 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-red-brand/[0.08] blur-3xl" />
+          <div className="absolute left-1/2 top-0 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-red-brand/[0.12] blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-3xl text-center">

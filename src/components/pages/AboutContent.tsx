@@ -63,7 +63,7 @@ export default function AboutContent() {
         variants={stagger}
       >
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-          <div className="absolute -right-32 top-16 h-[480px] w-[480px] rounded-full bg-red-brand/[0.03] blur-3xl" />
+          <div className="absolute -right-32 top-16 h-[480px] w-[480px] rounded-full bg-red-brand/[0.06] blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl">
@@ -74,7 +74,7 @@ export default function AboutContent() {
             Our Story
           </motion.h1>
           <motion.p
-            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg lg:text-xl"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:mt-8 sm:text-lg lg:text-xl"
             variants={fadeUp}
           >
             DygoTalent was born from a clear mission — to reshape how talent is
@@ -101,7 +101,7 @@ export default function AboutContent() {
               Building the Future of Talent Management
             </motion.h2>
             <motion.p
-              className="mt-6 text-base leading-relaxed text-neutral-600 sm:text-lg"
+              className="mt-6 text-base leading-relaxed text-neutral-400 sm:text-lg"
               variants={fadeUp}
             >
               In a world where creators shape culture, DygoTalent bridges the gap
@@ -110,7 +110,7 @@ export default function AboutContent() {
               creator economy and fights for their story.
             </motion.p>
             <motion.p
-              className="mt-4 text-base leading-relaxed text-neutral-600 sm:text-lg"
+              className="mt-4 text-base leading-relaxed text-neutral-400 sm:text-lg"
               variants={fadeUp}
             >
               Today, we represent a growing roster of creators and influencers,
@@ -124,10 +124,10 @@ export default function AboutContent() {
             className="relative hidden lg:block"
             variants={fadeUp}
           >
-            <div className="absolute inset-0 rounded-3xl bg-neutral-50" />
-            <div className="absolute inset-4 rounded-2xl border border-neutral-200/60" />
+            <div className="absolute inset-0 rounded-3xl bg-neutral-900" />
+            <div className="absolute inset-4 rounded-2xl border border-neutral-800/60" />
             <div className="absolute bottom-8 left-8 right-8 top-8 flex items-center justify-center">
-              <span className="font-heading text-6xl font-bold uppercase tracking-wider text-red-brand/10">
+              <span className="font-heading text-6xl font-bold uppercase tracking-wider text-red-brand/20">
                 DT
               </span>
             </div>
@@ -137,7 +137,7 @@ export default function AboutContent() {
 
       {/* What Makes Us Different */}
       <motion.section
-        className="bg-neutral-50 px-4 py-20 sm:px-6 sm:py-28 lg:px-8"
+        className="bg-neutral-950 px-4 py-20 sm:px-6 sm:py-28 lg:px-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
@@ -151,7 +151,7 @@ export default function AboutContent() {
             What Makes Us Different
           </motion.h2>
           <motion.p
-            className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-500 sm:text-lg"
+            className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg"
             variants={fadeUp}
           >
             Our approach puts creators at the center of every decision.
@@ -161,16 +161,16 @@ export default function AboutContent() {
             {differentiators.map((item, i) => (
               <motion.div
                 key={item.label}
-                className="group rounded-2xl border border-neutral-200/80 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-200/50"
+                className="group rounded-2xl border border-neutral-800/80 bg-neutral-900 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30"
                 variants={fadeUp}
               >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-red-brand/[0.07] font-heading text-sm font-bold text-red-brand">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-red-brand/[0.12] font-heading text-sm font-bold text-red-brand">
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <h3 className="font-heading text-xs font-bold uppercase tracking-wider">
                   {item.label}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                <p className="mt-3 text-sm leading-relaxed text-neutral-400">
                   {item.text}
                 </p>
               </motion.div>
@@ -202,7 +202,7 @@ export default function AboutContent() {
                 <h3 className="font-heading text-xs font-bold uppercase tracking-wider">
                   {v.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                <p className="mt-3 text-sm leading-relaxed text-neutral-400">
                   {v.description}
                 </p>
               </motion.div>
@@ -227,7 +227,7 @@ export default function AboutContent() {
             Let&rsquo;s Work Together
           </motion.h2>
           <motion.p
-            className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-neutral-500 sm:text-lg"
+            className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-neutral-400 sm:text-lg"
             variants={fadeUp}
           >
             Ready to take your career or brand to the next level?
@@ -235,7 +235,7 @@ export default function AboutContent() {
           <motion.div className="mt-10 flex flex-wrap items-center justify-center gap-4" variants={fadeUp}>
             <Link
               href="/services"
-              className="inline-block rounded-full border border-neutral-300 px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-white"
+              className="inline-block rounded-full border border-neutral-700 px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
             >
               Our Services
             </Link>

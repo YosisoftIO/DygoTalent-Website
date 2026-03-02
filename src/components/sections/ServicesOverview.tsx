@@ -71,10 +71,10 @@ export default function ServicesOverview() {
           {services.map((service) => (
             <motion.article
               key={service.id}
-              className="group rounded-2xl border border-neutral-200/80 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-neutral-200/50"
+              className="group rounded-2xl border border-neutral-800/80 bg-neutral-900 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
               variants={itemVariants}
             >
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-brand/[0.07] text-red-brand">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-brand/[0.12] text-red-brand">
                 <ServiceIcon name={service.icon} />
               </div>
 
@@ -82,7 +82,7 @@ export default function ServicesOverview() {
                 {service.title}
               </motion.h3>
 
-              <motion.p className="mt-3 text-sm leading-relaxed text-neutral-500">
+              <motion.p className="mt-3 text-sm leading-relaxed text-neutral-400">
                 {service.shortDescription}
               </motion.p>
             </motion.article>
@@ -92,7 +92,7 @@ export default function ServicesOverview() {
         <motion.div className="mt-12 text-center" variants={itemVariants}>
           <Link
             href="/services"
-            className="inline-block rounded-full border border-neutral-300 px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-white"
+            className="inline-block rounded-full border border-neutral-700 px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
           >
             View All Services
           </Link>

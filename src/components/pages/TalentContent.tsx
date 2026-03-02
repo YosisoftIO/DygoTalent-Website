@@ -58,7 +58,7 @@ export default function TalentContent() {
         variants={stagger}
       >
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-          <div className="absolute -left-32 top-24 h-[420px] w-[420px] rounded-full bg-red-brand/[0.03] blur-3xl" />
+          <div className="absolute -left-32 top-24 h-[420px] w-[420px] rounded-full bg-red-brand/[0.06] blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl">
@@ -69,7 +69,7 @@ export default function TalentContent() {
             Our Talent
           </motion.h1>
           <motion.p
-            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg lg:text-xl"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:mt-8 sm:text-lg lg:text-xl"
             variants={fadeUp}
           >
             Meet the creators and influencers shaping culture &mdash; managed
@@ -91,10 +91,10 @@ export default function TalentContent() {
             {creators.map((creator) => (
               <motion.div
                 key={creator.id}
-                className="group overflow-hidden rounded-2xl border border-neutral-200/80 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-neutral-200/50"
+                className="group overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
                 variants={fadeUp}
               >
-                <div className="relative aspect-square overflow-hidden bg-neutral-100">
+                <div className="relative aspect-square overflow-hidden bg-neutral-800">
                   <Image
                     src={creator.photo}
                     alt={creator.name}
@@ -109,7 +109,7 @@ export default function TalentContent() {
                   <h3 className="font-heading text-xs font-bold uppercase tracking-wider">
                     {creator.name}
                   </h3>
-                  <p className="mt-1 text-sm text-neutral-500">
+                  <p className="mt-1 text-sm text-neutral-400">
                     {creator.niche}
                   </p>
 
@@ -123,7 +123,7 @@ export default function TalentContent() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`${creator.name} on ${platform.charAt(0).toUpperCase() + platform.slice(1)}`}
-                            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-neutral-100 text-neutral-500 transition-colors duration-200 hover:bg-red-brand hover:text-white"
+                            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-neutral-800 text-neutral-400 transition-colors duration-200 hover:bg-red-brand hover:text-white"
                           >
                             <SocialIcon platform={platform} />
                           </a>
@@ -153,7 +153,7 @@ export default function TalentContent() {
             Join Our Roster
           </motion.h2>
           <motion.p
-            className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-neutral-500 sm:text-lg"
+            className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-neutral-400 sm:text-lg"
             variants={fadeUp}
           >
             Ready to take your creator career to the next level?

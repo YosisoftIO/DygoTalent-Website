@@ -30,7 +30,7 @@ export default function ContactContent() {
         variants={stagger}
       >
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-          <div className="absolute right-0 top-24 h-[360px] w-[360px] rounded-full bg-red-brand/[0.03] blur-3xl" />
+          <div className="absolute right-0 top-24 h-[360px] w-[360px] rounded-full bg-red-brand/[0.06] blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -41,7 +41,7 @@ export default function ContactContent() {
             Get in Touch
           </motion.h1>
           <motion.p
-            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg"
+            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:mt-8 sm:text-lg"
             variants={fadeUp}
           >
             Ready to start a conversation? Book a call directly or reach out
@@ -59,11 +59,11 @@ export default function ContactContent() {
         variants={stagger}
       >
         <motion.div
-          className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm"
+          className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-900 shadow-sm shadow-black/20"
           variants={fadeUp}
         >
-          <div className="border-b border-neutral-100 px-6 py-4 sm:px-8">
-            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-600">
+          <div className="border-b border-neutral-800 px-6 py-4 sm:px-8">
+            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-400">
               Book a Call
             </h2>
           </div>
@@ -81,7 +81,7 @@ export default function ContactContent() {
 
       {/* Contact Info */}
       <motion.section
-        className="bg-neutral-50 px-4 py-20 sm:px-6 sm:py-28 lg:px-8"
+        className="bg-neutral-950 px-4 py-20 sm:px-6 sm:py-28 lg:px-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
@@ -90,7 +90,7 @@ export default function ContactContent() {
         <div className="mx-auto grid max-w-4xl gap-12 sm:grid-cols-2">
           {/* Email */}
           <motion.div variants={fadeUp}>
-            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-600">
+            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-400">
               Email
             </h2>
             <a
@@ -99,14 +99,14 @@ export default function ContactContent() {
             >
               {siteConfig.email}
             </a>
-            <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+            <p className="mt-2 text-sm leading-relaxed text-neutral-400">
               We typically respond within 24 hours.
             </p>
           </motion.div>
 
           {/* Social */}
           <motion.div variants={fadeUp}>
-            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-600">
+            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-neutral-400">
               Social
             </h2>
             <div className="mt-4 flex flex-col gap-3">

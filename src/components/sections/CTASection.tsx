@@ -22,7 +22,7 @@ const fadeUp = {
 export default function CTASection() {
   return (
     <motion.section
-      className="relative overflow-hidden bg-foreground px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
+      className="relative overflow-hidden bg-neutral-900 px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-80px' }}
@@ -30,7 +30,7 @@ export default function CTASection() {
     >
       {/* Subtle red glow */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute left-1/2 top-0 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-red-brand/[0.08] blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-red-brand/[0.12] blur-3xl" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-3xl text-center">

@@ -32,7 +32,7 @@ export default function PortfolioContent() {
         variants={stagger}
       >
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-          <div className="absolute -right-32 top-16 h-[480px] w-[480px] rounded-full bg-red-brand/[0.03] blur-3xl" />
+          <div className="absolute -right-32 top-16 h-[480px] w-[480px] rounded-full bg-red-brand/[0.06] blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl">
@@ -43,7 +43,7 @@ export default function PortfolioContent() {
             Our Portfolio
           </motion.h1>
           <motion.p
-            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:mt-8 sm:text-lg lg:text-xl"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:mt-8 sm:text-lg lg:text-xl"
             variants={fadeUp}
           >
             Brands we&rsquo;ve worked with &mdash; building partnerships that
@@ -65,7 +65,7 @@ export default function PortfolioContent() {
             {clients.map((client) => (
               <motion.div
                 key={client.id}
-                className="group flex aspect-[3/2] items-center justify-center rounded-2xl border border-neutral-200/80 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-200/50"
+                className="group flex aspect-[3/2] items-center justify-center rounded-2xl border border-neutral-800/80 bg-neutral-900 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30"
                 variants={fadeUp}
               >
                 <Image
@@ -98,7 +98,7 @@ export default function PortfolioContent() {
             Want to See Your Brand Here?
           </motion.h2>
           <motion.p
-            className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-neutral-500 sm:text-lg"
+            className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-neutral-400 sm:text-lg"
             variants={fadeUp}
           >
             Partner with DygoTalent and connect with creators who move culture.
