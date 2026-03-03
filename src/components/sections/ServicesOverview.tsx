@@ -75,57 +75,30 @@ export default function ServicesOverview() {
 
         {/* Cycling text animation */}
         <motion.div
-          className="mt-16 flex flex-col items-center justify-center gap-2 overflow-hidden py-8 sm:gap-3 lg:gap-4"
+          className="mt-16 flex items-center justify-center overflow-hidden py-8"
           variants={itemVariants}
           aria-hidden="true"
         >
-          {/* Previous service (dimmed) */}
-          <div className="h-8 overflow-hidden sm:h-10 lg:h-12">
-            <AnimatePresence mode="popLayout">
-              <motion.p
-                key={`prev-${currentIndex}`}
-                className="text-center text-sm italic text-neutral-600 sm:text-base lg:text-lg"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -20, opacity: 0 }}
-                transition={slideTransition}
-              >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              className="flex flex-col items-center gap-2 sm:gap-3 lg:gap-4"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -40, opacity: 0 }}
+              transition={slideTransition}
+            >
+              <p className="text-center text-sm italic text-neutral-600 sm:text-base lg:text-lg">
                 {getServiceName(-1)}
-              </motion.p>
-            </AnimatePresence>
-          </div>
-
-          {/* Current service (prominent) */}
-          <div className="h-10 overflow-hidden sm:h-14 lg:h-[4.5rem]">
-            <AnimatePresence mode="popLayout">
-              <motion.p
-                key={`current-${currentIndex}`}
-                className="font-heading text-center text-xl font-bold uppercase tracking-wider text-white sm:text-3xl lg:text-5xl"
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -30, opacity: 0 }}
-                transition={slideTransition}
-              >
+              </p>
+              <p className="font-heading text-center text-xl font-bold uppercase tracking-wider text-white sm:text-3xl lg:text-5xl">
                 {getServiceName(0)}
-              </motion.p>
-            </AnimatePresence>
-          </div>
-
-          {/* Next service (dimmed) */}
-          <div className="h-8 overflow-hidden sm:h-10 lg:h-12">
-            <AnimatePresence mode="popLayout">
-              <motion.p
-                key={`next-${currentIndex}`}
-                className="text-center text-sm italic text-neutral-600 sm:text-base lg:text-lg"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -20, opacity: 0 }}
-                transition={slideTransition}
-              >
+              </p>
+              <p className="text-center text-sm italic text-neutral-600 sm:text-base lg:text-lg">
                 {getServiceName(1)}
-              </motion.p>
-            </AnimatePresence>
-          </div>
+              </p>
+            </motion.div>
+          </AnimatePresence>
         </motion.div>
 
         <motion.div className="mt-12 text-center" variants={itemVariants}>
