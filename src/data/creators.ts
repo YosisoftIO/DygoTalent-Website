@@ -12,23 +12,42 @@ export interface Creator {
 
 export const creators: Creator[] = [
   {
-    id: 'creator-1',
-    name: 'Sample Creator',
-    photo: '/creators/placeholder.jpg',
-    niche: 'Lifestyle',
-    socials: { instagram: '#' },
+    id: 'jack-styles',
+    name: 'Jack Styles',
+    photo: '/creators/jack-styles.png',
+    niche: 'Pro Wrestling Announcer / Rapper',
+    socials: {},
   },
-  // More creators will be added when data is available
+  {
+    id: 'goofygenchess',
+    name: 'Goofygenchess',
+    photo: '/creators/goofygenchess.jpeg',
+    niche: 'Social Media Influencer',
+    socials: {},
+  },
+  {
+    id: 'saivite',
+    name: 'Saivite',
+    photo: '/creators/saivite.jpeg',
+    niche: 'Music Producer / DJ',
+    socials: {},
+  },
+  {
+    id: 'pawan-ch',
+    name: 'Pawan Ch',
+    photo: '/creators/pawan-ch.jpeg',
+    niche: 'Music Director',
+    socials: {},
+  },
+  {
+    id: 'poorvi-koutish',
+    name: 'Poorvi Koutish',
+    photo: '/creators/poorvi-koutish.jpeg',
+    niche: 'Actor / Singer',
+    socials: {},
+  },
 ]
 
-export const niches = [
-  'All',
-  'Lifestyle',
-  'Tech',
-  'Fashion',
-  'Food',
-  'Travel',
-  'Fitness',
-] as const
+export const niches = ['All', 'Music', 'Entertainment', 'Social Media'] as const
 
 export type Niche = (typeof niches)[number]

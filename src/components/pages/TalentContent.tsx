@@ -106,10 +106,10 @@ export default function TalentContent() {
                 </div>
 
                 <div className="p-5">
-                  <h3 className="font-heading text-xs font-bold uppercase tracking-wider">
+                  <h3 className="font-heading text-sm font-bold uppercase tracking-wider sm:text-base">
                     {creator.name}
                   </h3>
-                  <p className="mt-1 text-sm text-neutral-400">
+                  <p className="mt-1 text-xs text-neutral-400 sm:text-sm">
                     {creator.niche}
                   </p>
 
