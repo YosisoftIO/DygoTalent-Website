@@ -9,7 +9,7 @@ npm run dev              # Start dev server (http://localhost:3000)
 npm run build            # Production build
 npm run lint             # ESLint
 npm test                 # Run all tests (Jest + React Testing Library)
-npm test -- --watch      # Watch mode
+npm run test:watch       # Watch mode
 npm test -- path/to/file # Run a single test file
 ```
 
@@ -37,6 +37,7 @@ No CMS. Content lives in TypeScript data files at `src/data/`:
 - `services.ts` — service definitions with `Service` interface
 - `creators.ts` — talent roster with `Creator` interface
 - `clients.ts` — portfolio brands with `Client` interface
+- `team.ts` — team member profiles with `TeamMember` interface
 
 ### SEO
 
