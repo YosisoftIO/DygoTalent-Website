@@ -89,8 +89,12 @@ export default function TalentContent() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {creators.map((creator) => (
-              <motion.div
+              <motion.a
                 key={creator.id}
+                href={creator.socials.instagram || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${creator.name} — opens Instagram in a new tab`}
                 className="group overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
                 variants={fadeUp}
               >
@@ -112,26 +116,8 @@ export default function TalentContent() {
                   <p className="mt-1 text-xs text-neutral-400 sm:text-sm">
                     {creator.niche}
                   </p>
-
-                  <div className="mt-4 flex gap-3">
-                    {Object.entries(creator.socials).map(
-                      ([platform, url]) =>
-                        url && (
-                          <a
-                            key={platform}
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`${creator.name} on ${platform.charAt(0).toUpperCase() + platform.slice(1)}`}
-                            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-neutral-800 text-neutral-400 transition-colors duration-200 hover:bg-red-brand hover:text-white"
-                          >
-                            <SocialIcon platform={platform} />
-                          </a>
-                        )
-                    )}
-                  </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
