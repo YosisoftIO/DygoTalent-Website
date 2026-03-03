@@ -16,7 +16,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="relative block h-10 w-32">
+        <Link href="/" className="relative block h-14 w-44">
           <Image
             src="/logo.jpeg"
             alt="DygoTalent"
