@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import HomePage from '@/app/page'
 import { siteConfig } from '@/data/siteConfig'
-import { services } from '@/data/services'
+// Services data no longer displayed as cards; cycling animation uses hardcoded names
 
 // Mock framer-motion to avoid animation issues in tests
 jest.mock('framer-motion', () => ({
@@ -18,6 +18,7 @@ jest.mock('framer-motion', () => ({
     article: ({ children, ...props }: React.PropsWithChildren<Record<string, unknown>>) => <article {...props}>{children}</article>,
   },
   AnimatePresence: ({ children }: React.PropsWithChildren) => <>{children}</>,
+  useReducedMotion: () => false,
   useAnimation: () => ({ start: jest.fn(), stop: jest.fn() }),
   useInView: () => true,
 }))
@@ -40,16 +41,14 @@ describe('Home Page', () => {
   })
 
   describe('Services Overview section', () => {
-    it('renders all three service titles', () => {
-      services.forEach((service) => {
-        expect(screen.getByText(service.title)).toBeInTheDocument()
-      })
+    it('renders the What We Do heading', () => {
+      expect(screen.getByText('What We Do')).toBeInTheDocument()
     })
 
-    it('renders service descriptions', () => {
-      services.forEach((service) => {
-        expect(screen.getByText(service.shortDescription)).toBeInTheDocument()
-      })
+    it('renders cycling service names', () => {
+      // Initial state shows Content Production as the current item
+      const matches = screen.getAllByText('Content Production')
+      expect(matches.length).toBeGreaterThanOrEqual(1)
     })
   })
 
@@ -83,7 +82,7 @@ describe('Home Page', () => {
         /talent|creator|management/i.test(text)
       )
       const servicesIndex = sectionTexts.findIndex((text) =>
-        text.includes('Talent Management') && text.includes('Brand Collaborations')
+        text.includes('What We Do') && text.includes('Content Production')
       )
       const ctaIndex = sectionTexts.findIndex(
         (text, i) =>
