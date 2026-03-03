@@ -41,7 +41,7 @@ export default function ServicesOverview() {
     if (prefersReducedMotion) return
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % SERVICE_NAMES.length)
-    }, 3000)
+    }, 5000)
     return () => clearInterval(interval)
   }, [prefersReducedMotion])
 
