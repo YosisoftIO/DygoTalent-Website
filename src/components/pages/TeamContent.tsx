@@ -75,7 +75,7 @@ export default function TeamContent() {
                     width={400}
                     height={400}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="h-full w-full object-cover"
+                    className={`h-full w-full object-cover ${member.id === 'yoda' ? 'object-[center_20%]' : ''}`}
                   />
                 </div>
 
