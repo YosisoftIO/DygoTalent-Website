@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { siteConfig } from '@/data/siteConfig'
 
@@ -15,11 +16,14 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-heading text-lg font-bold uppercase tracking-wider text-foreground"
-        >
-          DygoTalent
+        <Link href="/" className="relative block h-10 w-32">
+          <Image
+            src="/logo.jpeg"
+            alt="DygoTalent"
+            fill
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
