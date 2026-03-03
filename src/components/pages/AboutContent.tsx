@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const stagger = {
@@ -127,9 +128,13 @@ export default function AboutContent() {
             <div className="absolute inset-0 rounded-3xl bg-neutral-900" />
             <div className="absolute inset-4 rounded-2xl border border-neutral-800/60" />
             <div className="absolute bottom-8 left-8 right-8 top-8 flex items-center justify-center">
-              <span className="font-heading text-6xl font-bold uppercase tracking-wider text-red-brand/20">
-                DT
-              </span>
+              <Image
+                src="/logo.jpeg"
+                alt="DygoTalent logo"
+                width={200}
+                height={200}
+                className="opacity-60"
+              />
             </div>
           </motion.div>
         </div>
