@@ -129,11 +129,11 @@ export default function AboutContent() {
             <div className="absolute inset-4 rounded-2xl border border-neutral-800/60" />
             <div className="absolute bottom-8 left-8 right-8 top-8 flex items-center justify-center">
               <Image
-                src="/logo.jpeg"
-                alt="DygoTalent logo"
-                width={200}
-                height={200}
-                className="opacity-60"
+                src="/pug-logo.jpeg"
+                alt="DygoTalent pug mascot logo"
+                width={280}
+                height={280}
+                className="rounded-xl"
               />
             </div>
           </motion.div>
