@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PortfolioContent from '@/components/pages/PortfolioContent'
+import { BreadcrumbJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Portfolio — Brands We\'ve Worked With',
@@ -21,5 +22,10 @@ export const metadata: Metadata = {
 }
 
 export default function PortfolioPage() {
-  return <PortfolioContent />
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: 'Portfolio', url: '/portfolio' }]} />
+      <PortfolioContent />
+    </>
+  )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import TeamContent from '@/components/pages/TeamContent'
+import { BreadcrumbJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Our Team — Meet the People Behind DygoTalent',
@@ -21,5 +22,10 @@ export const metadata: Metadata = {
 }
 
 export default function TeamPage() {
-  return <TeamContent />
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: 'Team', url: '/team' }]} />
+      <TeamContent />
+    </>
+  )
 }

@@ -4,7 +4,7 @@ import './globals.css'
 import { siteConfig } from '@/data/siteConfig'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { generateOrganizationSchema, generateWebSiteSchema, generateBreadcrumbSchema } from '@/lib/seo'
+import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -61,7 +61,6 @@ export default function RootLayout({
             __html: JSON.stringify([
               generateOrganizationSchema(),
               generateWebSiteSchema(),
-              generateBreadcrumbSchema([{ name: 'Home', url: '/' }]),
             ]),
           }}
         />

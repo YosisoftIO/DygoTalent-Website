@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import TalentContent from '@/components/pages/TalentContent'
+import { BreadcrumbJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Talent Roster — Our Creators & Influencers',
@@ -21,5 +22,10 @@ export const metadata: Metadata = {
 }
 
 export default function TalentPage() {
-  return <TalentContent />
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: 'Talent', url: '/talent' }]} />
+      <TalentContent />
+    </>
+  )
 }

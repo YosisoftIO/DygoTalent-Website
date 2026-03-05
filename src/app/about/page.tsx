@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import AboutContent from '@/components/pages/AboutContent'
+import { BreadcrumbJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'About Us — Our Story & Mission',
@@ -21,5 +22,10 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
-  return <AboutContent />
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: 'About', url: '/about' }]} />
+      <AboutContent />
+    </>
+  )
 }

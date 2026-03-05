@@ -101,23 +101,9 @@ describe('SEO Utilities', () => {
       expect(schema.url).toBe(siteConfig.url)
     })
 
-    it('includes a SearchAction potential action', () => {
+    it('does not include a SearchAction (site has no search)', () => {
       const schema = generateWebSiteSchema()
-      expect(schema.potentialAction).toBeDefined()
-      expect(schema.potentialAction['@type']).toBe('SearchAction')
-    })
-
-    it('SearchAction has a valid target URL template', () => {
-      const schema = generateWebSiteSchema()
-      const { target } = schema.potentialAction
-      expect(target).toContain(siteConfig.url)
-      expect(target).toMatch(/\{.*\}/)
-    })
-
-    it('SearchAction has a query-input specification', () => {
-      const schema = generateWebSiteSchema()
-      expect(schema.potentialAction['query-input']).toBeDefined()
-      expect(schema.potentialAction['query-input']).toContain('required')
+      expect(schema).not.toHaveProperty('potentialAction')
     })
   })
 })

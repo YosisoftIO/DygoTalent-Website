@@ -17,11 +17,6 @@ export function generateWebSiteSchema() {
     '@type': 'WebSite',
     name: siteConfig.name,
     url: siteConfig.url,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteConfig.url}/?s={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
   }
 }
 
@@ -38,4 +33,16 @@ export function generateBreadcrumbSchema(
       item: `${siteConfig.url}${item.url}`,
     })),
   }
+}
+
+export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
+  const breadcrumbs = [{ name: 'Home', url: '/' }, ...items]
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs)),
+      }}
+    />
+  )
 }
